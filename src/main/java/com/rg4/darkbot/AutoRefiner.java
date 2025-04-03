@@ -22,11 +22,12 @@ public class AutoRefiner implements
 
     @Override
     public String getStatus() {
-        return "Auto Refiner";
+        return "Auto Refiner Module is " + (config.Active ? "active" : "inactive");
     }
 
     @Override
     public void onTickModule() {
+        if (!config.Active) return;
     }
 
     private AutoRefinerConfig config;
